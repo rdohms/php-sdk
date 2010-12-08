@@ -960,4 +960,20 @@ class Facebook
   protected static function base64UrlDecode($input) {
     return base64_decode(strtr($input, '-_', '+/'));
   }
+
+  /**
+   * Runs a FQL query agains the API
+   * 
+   * @param string $query
+   * @return array 
+   */
+  protected function fql($query)
+  {
+      $params = array(
+          'method' => 'fql.query',
+          'query' =>$query,
+      );
+      
+      return $this->api($params);
+  }
 }
