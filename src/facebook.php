@@ -967,13 +967,12 @@ class Facebook
    * @param string $query
    * @return array 
    */
-  protected function fql($query)
-  {
-      $params = array(
-          'method' => 'fql.query',
-          'query' =>$query,
-      );
-      
-      return $this->api($params);
+  protected function fql($query) {
+    $params = array(
+      'method' => 'fql.query',
+      'query' => $query,
+    );
+
+    return $this->api($params);
   }
 }
