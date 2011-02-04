@@ -967,7 +967,7 @@ class Facebook
    * @param string $query
    * @return array 
    */
-  protected function fql($query) {
+  public function fql($query) {
     $params = array(
       'method' => 'fql.query',
       'query' => $query,
